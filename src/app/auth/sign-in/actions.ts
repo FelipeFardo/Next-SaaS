@@ -1,7 +1,6 @@
 "use server";
 
 import { cookies } from "next/headers";
-import { redirect } from "next/navigation";
 import { acceptInvite } from "@/http/invites/accept-invite";
 import { signInWithPassword } from "@/http/profile/sign-in-with-password";
 import type { SignInFormData } from "./sign-in-form";

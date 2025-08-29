@@ -32,9 +32,15 @@ export function UpdateMemberRoleSelect({
       </SelectTrigger>
 
       <SelectContent>
-        <SelectItem value="ADMIN" className="cursor-pointer">Admin</SelectItem>
-        <SelectItem value="MEMBER" className="cursor-pointer">Member</SelectItem>
-        <SelectItem value="BILLING" className="cursor-pointer">Billing</SelectItem>
+        <SelectItem value="ADMIN" className="cursor-pointer">
+          Admin
+        </SelectItem>
+        <SelectItem value="MEMBER" className="cursor-pointer">
+          Member
+        </SelectItem>
+        <SelectItem value="BILLING" className="cursor-pointer">
+          Billing
+        </SelectItem>
       </SelectContent>
     </Select>
   );

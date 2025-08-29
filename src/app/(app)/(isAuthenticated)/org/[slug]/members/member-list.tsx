@@ -5,7 +5,6 @@ import {
   UserRound,
   Users,
 } from "lucide-react";
-import Image from "next/image";
 import { organizationSchema } from "@/auth";
 
 import { ability, getCurrentOrg } from "@/auth/auth";
@@ -22,9 +21,9 @@ import { Table, TableBody, TableCell, TableRow } from "@/components/ui/table";
 import { getMembers } from "@/http/members/get-members";
 import { getMembership } from "@/http/members/get-membership";
 import { getOrganization } from "@/http/orgs/get-organization";
+import { getIniciais } from "@/lib/get-initials";
 import { removeMemberAction, transferOwnershipAction } from "./actions";
 import { UpdateMemberRoleSelect } from "./update-member-role-select";
-import { getIniciais } from "@/lib/get-initials";
 
 export async function MemberList() {
   const currentOrg = await getCurrentOrg();
@@ -69,7 +68,9 @@ export async function MemberList() {
                     <TableCell className="py-4 pl-6" style={{ width: 72 }}>
                       <div className="relative">
                         <Avatar className="h-10 w-10 ring-2 ring-background shadow-sm">
-                          <AvatarFallback>{getIniciais(member?.name ||'')}</AvatarFallback>
+                          <AvatarFallback>
+                            {getIniciais(member?.name || "")}
+                          </AvatarFallback>
                           {member.avatarUrl && (
                             <AvatarImage
                               src={member.avatarUrl}
