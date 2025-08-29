@@ -81,7 +81,8 @@ export default async function Settings() {
                   <CardTitle>Organization Image</CardTitle>
                 </div>
                 <CardDescription className="text-sm">
-                  This is the image that will appear on the home and organization page
+                  This is the image that will appear on the home and
+                  organization page
                 </CardDescription>
               </CardHeader>
               <CardContent className="pt-0">
@@ -145,7 +146,9 @@ export default async function Settings() {
                   </CardTitle>
                 </div>
                 <CardDescription>
-                  This action is <strong>irreversible</strong>. All organization data, including projects, users, and settings, will be permanently deleted.
+                  This action is <strong>irreversible</strong>. All organization
+                  data, including projects, users, and settings, will be
+                  permanently deleted.
                 </CardDescription>
               </CardHeader>
               <CardContent>

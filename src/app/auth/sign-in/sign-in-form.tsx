@@ -94,14 +94,12 @@ export function SignInForm() {
           {isSubmitting ? (
             <Loader2 className="size-4 animate-spin" />
           ) : (
-                  "Sign in with email"
-
+            "Sign in with email"
           )}
         </Button>
 
         <Button className="w-full" variant="link" size="sm" asChild>
           <Link href="/auth/sign-up">Create a new account</Link>
-
         </Button>
       </form>
       <Separator />

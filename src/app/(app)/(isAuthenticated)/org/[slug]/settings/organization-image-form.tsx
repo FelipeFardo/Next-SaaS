@@ -113,7 +113,7 @@ export function OrganizationImageForm({
       toast("Sucesso", {
         description: "Organization avatar updated successfully.",
       });
-    } catch (error) {
+    } catch (_error) {
       toast("Erro", {
         description: "Failed to save avatar. Please try again.",
       });

@@ -75,9 +75,7 @@ export function CreateInviteForm() {
         <Alert variant="default">
           <CheckCircle className="size-4" />
           <AlertTitle>Invite sent!</AlertTitle>
-          <AlertDescription>
-            The invite was successfully sent.
-          </AlertDescription>
+          <AlertDescription>The invite was successfully sent.</AlertDescription>
         </Alert>
       )}
 
@@ -123,7 +121,7 @@ export function CreateInviteForm() {
                     </div>
                   </SelectItem>
                   <SelectItem value="MEMBER">
-                                  <div className="flex flex-col">
+                    <div className="flex flex-col">
                       <span>Member</span>
                       <span className="text-xs text-muted-foreground">
                         Standard access to features
