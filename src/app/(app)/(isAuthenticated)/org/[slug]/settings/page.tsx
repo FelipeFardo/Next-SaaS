@@ -130,13 +130,6 @@ export default async function Settings() {
           <Separator className="my-12" />
 
           <div className="space-y-4">
-            <div className="flex items-center gap-2">
-              <Trash2 className="h-5 w-5 text-destructive" />
-              <h2 className="text-xl font-semibold text-destructive">
-                Danger Zone
-              </h2>
-            </div>
-
             <Card className="border-destructive/50 bg-destructive/5">
               <CardHeader>
                 <div className="flex items-center gap-2">
