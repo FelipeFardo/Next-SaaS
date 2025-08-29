@@ -14,6 +14,7 @@ import {
   X,
   Zap,
 } from "lucide-react";
+import Link from "next/link";
 import { useEffect, useState } from "react";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
@@ -163,6 +164,7 @@ export default function LandingPage() {
             </Button>
 
             <button
+              type="button"
               className="md:hidden"
               onClick={() => setIsMenuOpen(!isMenuOpen)}
             >
@@ -229,8 +231,8 @@ export default function LandingPage() {
 
           {/* Stats */}
           <div className="grid grid-cols-2 md:grid-cols-4 gap-8 mb-10 animate-fade-in-up animation-delay-400">
-            {stats.map((stat, index) => (
-              <div key={index} className="text-center">
+            {stats.map((stat) => (
+              <div key={stat.number} className="text-center">
                 <div className="text-3xl md:text-4xl font-bold bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent mb-1">
                   {stat.number}
                 </div>
@@ -288,11 +290,11 @@ export default function LandingPage() {
           </div>
 
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {features.map((feature, index) => {
+            {features.map((feature) => {
               const Icon = feature.icon;
               return (
                 <Card
-                  key={index}
+                  key={feature.title}
                   className="border-0 shadow-lg hover:shadow-2xl transition-all duration-500 group hover:-translate-y-2 bg-white dark:bg-gray-900"
                 >
                   <CardHeader className="pb-4">
@@ -368,10 +370,10 @@ export default function LandingPage() {
             </p>
             <div className="flex justify-center items-center space-x-2 mb-8">
               <div className="flex">
-                {[...Array(5)].map((_, i) => (
+                {["one", "two", "three", "four", "five"].map((id) => (
                   <Star
-                    key={i}
-                    className="h-6 w-6 fill-yellow-400 text-yellow-400"
+                    key={id}
+                    className="h-5 w-5 fill-yellow-400 text-yellow-400"
                   />
                 ))}
               </div>
@@ -381,16 +383,16 @@ export default function LandingPage() {
           </div>
 
           <div className="grid md:grid-cols-3 gap-8">
-            {testimonials.map((testimonial, index) => (
+            {testimonials.map((testimonial) => (
               <Card
-                key={index}
+                key={testimonial.name}
                 className="bg-white dark:bg-gray-900 border-0 shadow-xl hover:shadow-2xl transition-all duration-300 hover:-translate-y-1"
               >
                 <CardContent className="p-8">
                   <div className="flex items-center mb-6">
-                    {[...Array(5)].map((_, i) => (
+                    {["one", "two", "three", "four", "five"].map((id) => (
                       <Star
-                        key={i}
+                        key={id}
                         className="h-5 w-5 fill-yellow-400 text-yellow-400"
                       />
                     ))}
@@ -480,13 +482,13 @@ export default function LandingPage() {
               </p>
               <div className="flex space-x-4">
                 {["LinkedIn", "Twitter", "YouTube"].map((social) => (
-                  <a
+                  <Link
                     key={social}
-                    href="#"
+                    href={social}
                     className="w-10 h-10 bg-gray-800 rounded-full flex items-center justify-center hover:bg-blue-600 transition-colors duration-300"
                   >
                     <span className="text-xs font-semibold">{social[0]}</span>
-                  </a>
+                  </Link>
                 ))}
               </div>
             </div>
@@ -497,12 +499,12 @@ export default function LandingPage() {
                 {["Recursos", "Integrações", "API", "Segurança", "Preços"].map(
                   (item) => (
                     <li key={item}>
-                      <a
-                        href="#"
+                      <Link
+                        href={item}
                         className="hover:text-blue-400 transition-colors duration-300"
                       >
                         {item}
-                      </a>
+                      </Link>
                     </li>
                   ),
                 )}
@@ -515,12 +517,12 @@ export default function LandingPage() {
                 {["Sobre", "Blog", "Carreiras", "Imprensa", "Parceiros"].map(
                   (item) => (
                     <li key={item}>
-                      <a
-                        href="#"
+                      <Link
+                        href={item}
                         className="hover:text-blue-400 transition-colors duration-300"
                       >
                         {item}
-                      </a>
+                      </Link>
                     </li>
                   ),
                 )}
@@ -538,12 +540,12 @@ export default function LandingPage() {
                   "Contato",
                 ].map((item) => (
                   <li key={item}>
-                    <a
-                      href="#"
+                    <Link
+                      href={item}
                       className="hover:text-blue-400 transition-colors duration-300"
                     >
                       {item}
-                    </a>
+                    </Link>
                   </li>
                 ))}
               </ul>
@@ -556,13 +558,13 @@ export default function LandingPage() {
             </p>
             <div className="flex space-x-6">
               {["Privacidade", "Termos", "Cookies", "LGPD"].map((item) => (
-                <a
+                <Link
                   key={item}
-                  href="#"
+                  href="auth/sign-in"
                   className="text-gray-400 hover:text-blue-400 transition-colors duration-300 text-sm"
                 >
                   {item}
-                </a>
+                </Link>
               ))}
             </div>
           </div>

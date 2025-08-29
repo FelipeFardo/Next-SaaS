@@ -1,8 +1,8 @@
 "use client";
 
-import { useState } from "react";
 import { XCircle } from "lucide-react";
 import { useParams } from "next/navigation";
+import { useState } from "react";
 
 import {
   AlertDialog,
@@ -21,7 +21,7 @@ import { shutdownOrganizationAction } from "./actions";
 export function ShutdownOrganizationButton() {
   const [confirmation, setConfirmation] = useState("");
 
-  const {slug: orgSlug} = useParams<{slug:string}>()
+  const { slug: orgSlug } = useParams<{ slug: string }>();
   const requiredText = `delete ${orgSlug}`;
 
   return (
@@ -44,7 +44,8 @@ export function ShutdownOrganizationButton() {
 
         <div className="space-y-2 py-4">
           <p className="text-sm text-muted-foreground">
-            To confirm, type <code className="font-mono">{requiredText}</code> below:
+            To confirm, type <code className="font-mono">{requiredText}</code>{" "}
+            below:
           </p>
           <Input
             value={confirmation}

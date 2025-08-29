@@ -1,10 +1,10 @@
 "use server";
 
 import { revalidateTag } from "next/cache";
-import { getCurrentOrg } from "@/auth/auth";
-import { updateImageOrganization } from "@/http/orgs/update-image-organization";
-import { shutdownOrganization } from "@/http/orgs/shutdown-organization";
 import { redirect } from "next/navigation";
+import { getCurrentOrg } from "@/auth/auth";
+import { shutdownOrganization } from "@/http/orgs/shutdown-organization";
+import { updateImageOrganization } from "@/http/orgs/update-image-organization";
 
 export async function updateImageOrganizationAction(url: string) {
   const currentOrg = await getCurrentOrg();
@@ -17,13 +17,10 @@ export async function updateImageOrganizationAction(url: string) {
   revalidateTag("organization");
 }
 
+export async function shutdownOrganizationAction() {
+  const currentOrg = await getCurrentOrg();
 
-export  async function shutdownOrganizationAction() {
+  await shutdownOrganization({ org: currentOrg });
 
-
-    const currentOrg = await getCurrentOrg();
-
-    await shutdownOrganization({ org: currentOrg });
-
-    redirect("/");
-  }
+  redirect("/");
+}
