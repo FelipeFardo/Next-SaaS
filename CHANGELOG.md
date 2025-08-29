@@ -1,3 +1,10 @@
+## [1.0.1](https://github.com/FelipeFardo/Next-SaaS/compare/v1.0.0...v1.0.1) (2025-08-29)
+
+
+### Bug Fixes
+
+* cancel to cancelar in organization image ([14aa79d](https://github.com/FelipeFardo/Next-SaaS/commit/14aa79dbd7a19a69af42232e5d05a37ea1a41bae))
+
 # 1.0.0 (2025-08-29)
 
 
