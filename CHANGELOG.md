@@ -1,3 +1,10 @@
+## [1.0.2](https://github.com/FelipeFardo/Next-SaaS/compare/v1.0.1...v1.0.2) (2025-08-29)
+
+
+### Bug Fixes
+
+* remove title shutdown ([e4228e1](https://github.com/FelipeFardo/Next-SaaS/commit/e4228e16a6c2e735e85a85384e7779d41cb8dbaa))
+
 ## [1.0.1](https://github.com/FelipeFardo/Next-SaaS/compare/v1.0.0...v1.0.1) (2025-08-29)
 
 
