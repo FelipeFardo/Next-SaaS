@@ -1,3 +1,11 @@
+# [1.1.0](https://github.com/FelipeFardo/Next-SaaS/compare/v1.0.2...v1.1.0) (2025-08-30)
+
+
+### Features
+
+* replace avatarUrl to avatarKey ([604d329](https://github.com/FelipeFardo/Next-SaaS/commit/604d329d73b76e7a0975d9967e1411f33579f02d))
+* update biome format on save ([07fc24e](https://github.com/FelipeFardo/Next-SaaS/commit/07fc24e4c4e2cecae3440c6b005ecef258a650ef))
+
 ## [1.0.2](https://github.com/FelipeFardo/Next-SaaS/compare/v1.0.1...v1.0.2) (2025-08-29)
 
 
