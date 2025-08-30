@@ -5,7 +5,12 @@ import { Check, Upload, User, X } from "lucide-react";
 import { useParams } from "next/navigation";
 import { useRef, useState } from "react";
 import { toast } from "sonner";
-import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
+import { AvatarImage } from "@/components/avatar-image";
+import {
+  Avatar,
+  AvatarFallback,
+  AvatarImage as AvatarImagePrimitive,
+} from "@/components/ui/avatar";
 import { Button } from "@/components/ui/button";
 import type { GetOrganizationResponse } from "@/http/orgs/get-organization";
 import { createUpload } from "@/http/uploads/create-upload";
@@ -13,12 +18,12 @@ import { upload } from "@/http/uploads/upload";
 import { updateImageOrganizationAction } from "./actions";
 
 interface OrganizationImageFormProps {
-  currentAvatarUrl?: string;
+  currentavatarKey?: string;
   organizationName: string;
 }
 
 export function OrganizationImageForm({
-  currentAvatarUrl,
+  currentavatarKey,
   organizationName,
 }: OrganizationImageFormProps) {
   const [previewUrl, setPreviewUrl] = useState<string | null>(null);
@@ -64,7 +69,7 @@ export function OrganizationImageForm({
     reader.readAsDataURL(file);
   };
 
-  function onUpdateOrganizationImageCache(newAvatarUrl: string) {
+  function onUpdateOrganizationImageCache(newAvatarKey: string) {
     queryClient.setQueryData<GetOrganizationResponse>(
       ["organization", orgSlug],
       (oldOrganization) => {
@@ -72,7 +77,7 @@ export function OrganizationImageForm({
         return {
           organization: {
             ...oldOrganization.organization,
-            avatarUrl: newAvatarUrl,
+            avatarKey: newAvatarKey,
           },
         };
       },
@@ -80,7 +85,7 @@ export function OrganizationImageForm({
   }
 
   async function onSave(file: File) {
-    const { signedUrl, fileUrl } = await createUpload({
+    const { signedUrl, fileName } = await createUpload({
       contentType: file.type,
       name: file.name,
     });
@@ -90,8 +95,8 @@ export function OrganizationImageForm({
       file,
     });
 
-    await updateImageOrganizationAction(fileUrl);
-    onUpdateOrganizationImageCache(fileUrl);
+    await updateImageOrganizationAction(fileName);
+    onUpdateOrganizationImageCache(fileName);
   }
 
   const handleSave = async () => {
@@ -135,7 +140,7 @@ export function OrganizationImageForm({
     fileInputRef.current?.click();
   };
 
-  const displayUrl = previewUrl || currentAvatarUrl;
+  const displayUrl = previewUrl || currentavatarKey;
   const hasChanges = Boolean(previewUrl && selectedFile);
 
   return (
@@ -143,11 +148,20 @@ export function OrganizationImageForm({
       {/* Avatar Display */}
       <div className="flex flex-col items-center space-y-4">
         <Avatar className="h-40 w-40 border-2 border-muted">
-          <AvatarImage
-            src={displayUrl}
-            alt={`Avatar de ${organizationName}`}
-            className="object-cover"
-          />
+          {previewUrl && (
+            <AvatarImagePrimitive
+              src={previewUrl}
+              alt={`Avatar de ${organizationName}`}
+              className="object-cover"
+            />
+          )}
+          {!previewUrl && (
+            <AvatarImage
+              src={displayUrl}
+              alt={`Avatar de ${organizationName}`}
+              className="object-cover"
+            />
+          )}
           <AvatarFallback className="text-lg font-semibold bg-muted">
             <User className="h-8 w-8" />
           </AvatarFallback>
@@ -162,7 +176,7 @@ export function OrganizationImageForm({
             className="gap-2"
           >
             <Upload className="h-4 w-4" />
-            {currentAvatarUrl ? "Change Image" : "Add Image"}
+            {currentavatarKey ? "Change Image" : "Add Image"}
           </Button>
         )}
 

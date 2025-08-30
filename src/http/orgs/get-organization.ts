@@ -7,7 +7,7 @@ export interface GetOrganizationResponse {
     name: string;
     domain: string | null;
     shouldAttachUsersByDomain: boolean;
-    avatarUrl: string | null;
+    avatarKey: string | null;
     createdAt: string;
     updatedAt: string;
     ownerId: string;

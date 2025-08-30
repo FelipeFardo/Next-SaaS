@@ -14,7 +14,7 @@ interface GetInviteResponse {
     author: {
       id: string;
       name: string | null;
-      avatarUrl: string | null;
+      avatarKey: string | null;
     } | null;
   };
 }

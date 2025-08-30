@@ -3,8 +3,8 @@ import Link from "next/link";
 
 import { getCurrentOrgNullable } from "@/auth/auth";
 import { getOrganizations } from "@/http/orgs/get-organizations";
-
-import { Avatar, AvatarFallback, AvatarImage } from "./ui/avatar";
+import { AvatarImage } from "./avatar-image";
+import { Avatar, AvatarFallback } from "./ui/avatar";
 import {
   DropdownMenu,
   DropdownMenuContent,
@@ -30,8 +30,8 @@ export async function OrganizationSwitcher() {
         {currentOrganization ? (
           <>
             <Avatar className="size-4">
-              {currentOrganization.avatarUrl && (
-                <AvatarImage src={currentOrganization.avatarUrl} />
+              {currentOrganization.avatarKey && (
+                <AvatarImage src={currentOrganization.avatarKey} />
               )}
               <AvatarFallback />
             </Avatar>
@@ -60,8 +60,8 @@ export async function OrganizationSwitcher() {
                   className="cursor-pointer my-1"
                 >
                   <Avatar className="mr-2 size-4">
-                    {organization.avatarUrl && (
-                      <AvatarImage src={organization.avatarUrl} />
+                    {organization.avatarKey && (
+                      <AvatarImage src={organization.avatarKey} />
                     )}
                     <AvatarFallback />
                   </Avatar>

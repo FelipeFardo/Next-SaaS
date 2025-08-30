@@ -7,7 +7,8 @@ import { redirect } from "next/navigation";
 
 import { auth, isAuthenticated } from "@/auth/auth";
 import { Button } from "@/components//ui/button";
-import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
+import { AvatarImage } from "@/components/avatar-image";
+import { Avatar, AvatarFallback } from "@/components/ui/avatar";
 import { Separator } from "@/components/ui/separator";
 import { acceptInvite } from "@/http/invites/accept-invite";
 import { getInvite } from "@/http/invites/get-invite";
@@ -57,8 +58,8 @@ export default async function InvitePage({
       <div className="flex w-full max-w-sm flex-col justify-center space-y-6">
         <div className="flex flex-col items-center space-y-4">
           <Avatar className="size-16">
-            {invite.author?.avatarUrl && (
-              <AvatarImage src={invite.author.avatarUrl} />
+            {invite.author?.avatarKey && (
+              <AvatarImage src={invite.author.avatarKey} />
             )}
             <AvatarFallback />
           </Avatar>

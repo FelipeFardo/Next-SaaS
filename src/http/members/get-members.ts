@@ -9,7 +9,7 @@ export interface GetMembersResponse {
     role: Role;
     name: string | null;
     email: string;
-    avatarUrl: string | null;
+    avatarKey: string | null;
   }[];
 }
 

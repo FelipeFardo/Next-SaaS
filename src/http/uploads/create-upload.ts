@@ -6,7 +6,7 @@ interface CreateUploadRequest {
 }
 
 type CreateUploadResponse = {
-  fileUrl: string;
+  fileName: string;
   signedUrl: string;
 };
 

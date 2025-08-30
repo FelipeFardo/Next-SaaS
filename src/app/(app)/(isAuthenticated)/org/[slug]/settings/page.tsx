@@ -87,7 +87,7 @@ export default async function Settings() {
               </CardHeader>
               <CardContent className="pt-0">
                 <OrganizationImageForm
-                  currentAvatarUrl={organization.avatarUrl || undefined}
+                  currentavatarKey={organization.avatarKey || undefined}
                   organizationName={organization.name}
                 />
               </CardContent>

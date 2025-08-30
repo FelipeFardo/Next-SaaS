@@ -5,7 +5,7 @@ interface GetOrganizationsResponse {
     id: string;
     name: string;
     slug: string;
-    avatarUrl: string | null;
+    avatarKey: string | null;
   }[];
 }
 

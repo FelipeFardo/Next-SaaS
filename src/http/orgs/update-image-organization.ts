@@ -1,17 +1,17 @@
 import { api } from "../api-client";
 
 interface UpdateImageOrganizationRequest {
-  url: string;
+  name: string;
   org: string;
 }
 
 export async function updateImageOrganization({
-  url,
+  name,
   org,
 }: UpdateImageOrganizationRequest): Promise<void> {
   await api.patch(`organizations/${org}/avatar-url`, {
     json: {
-      imageUrl: url,
+      imageName: name,
     },
   });
 }

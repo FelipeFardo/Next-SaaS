@@ -71,9 +71,9 @@ export async function MemberList() {
                           <AvatarFallback>
                             {getIniciais(member?.name || "")}
                           </AvatarFallback>
-                          {member.avatarUrl && (
+                          {member.avatarKey && (
                             <AvatarImage
-                              src={member.avatarUrl}
+                              src={member.avatarKey}
                               width={40}
                               height={40}
                               alt={`Avatar de ${member.name}`}

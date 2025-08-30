@@ -6,8 +6,8 @@ import Link from "next/link";
 import { useParams } from "next/navigation";
 
 import { getProjects } from "@/http/projects/get-projects";
-
-import { Avatar, AvatarFallback, AvatarImage } from "./ui/avatar";
+import { AvatarImage } from "./avatar-image";
+import { Avatar, AvatarFallback } from "./ui/avatar";
 import {
   DropdownMenu,
   DropdownMenuContent,
@@ -47,8 +47,8 @@ export function ProjectSwitcher() {
         ) : currentProject ? (
           <>
             <Avatar className="size-4">
-              {currentProject.avatarUrl && (
-                <AvatarImage src={currentProject.avatarUrl} />
+              {currentProject.avatarKey && (
+                <AvatarImage src={currentProject.avatarKey} />
               )}
               <AvatarFallback />
             </Avatar>
@@ -80,8 +80,8 @@ export function ProjectSwitcher() {
                   className="cursor-pointer"
                 >
                   <Avatar className="mr-2 size-4">
-                    {project.avatarUrl && (
-                      <AvatarImage src={project.avatarUrl} />
+                    {project.avatarKey && (
+                      <AvatarImage src={project.avatarKey} />
                     )}
                     <AvatarFallback />
                   </Avatar>

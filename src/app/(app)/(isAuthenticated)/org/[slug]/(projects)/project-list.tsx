@@ -3,7 +3,8 @@ import relativeTime from "dayjs/plugin/relativeTime";
 import { ArrowRight } from "lucide-react";
 
 import { getCurrentOrg } from "@/auth/auth";
-import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
+import { AvatarImage } from "@/components/avatar-image";
+import { Avatar, AvatarFallback } from "@/components/ui/avatar";
 import { Button } from "@/components/ui/button";
 import {
   Card,
@@ -35,8 +36,8 @@ export async function ProjectList() {
             </CardHeader>
             <CardFooter className="flex items-center gap-1.5">
               <Avatar className="size-4">
-                {project.owner.avatarUrl && (
-                  <AvatarImage src={project.owner.avatarUrl} />
+                {project.owner.avatarKey && (
+                  <AvatarImage src={project.owner.avatarKey} />
                 )}
                 <AvatarFallback />
               </Avatar>

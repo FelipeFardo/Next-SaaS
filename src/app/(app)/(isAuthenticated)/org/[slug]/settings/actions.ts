@@ -6,12 +6,12 @@ import { getCurrentOrg } from "@/auth/auth";
 import { shutdownOrganization } from "@/http/orgs/shutdown-organization";
 import { updateImageOrganization } from "@/http/orgs/update-image-organization";
 
-export async function updateImageOrganizationAction(url: string) {
+export async function updateImageOrganizationAction(name: string) {
   const currentOrg = await getCurrentOrg();
 
   await updateImageOrganization({
     org: currentOrg,
-    url,
+    name,
   });
 
   revalidateTag("organization");

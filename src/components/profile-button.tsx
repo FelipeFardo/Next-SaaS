@@ -1,7 +1,6 @@
 import { ChevronDown, LogOut } from "lucide-react";
 
 import { auth } from "@/auth/auth";
-
 import { Avatar, AvatarFallback, AvatarImage } from "./ui/avatar";
 import {
   DropdownMenu,
@@ -31,7 +30,7 @@ export async function ProfileButton() {
           <span className="text-xs text-muted-foreground">{user.email}</span>
         </div>
         <Avatar className="size-8">
-          {user.avatarUrl && <AvatarImage src={user.avatarUrl} />}
+          {user.avatarKey && <AvatarImage src={user.avatarKey} />}
           {user.name && (
             <AvatarFallback>{getInitials(user.name)}</AvatarFallback>
           )}
