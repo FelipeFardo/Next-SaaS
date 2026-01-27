@@ -16,7 +16,7 @@ export async function Tabs() {
 
   return (
     <div className="border-b py-4">
-      <nav className="mx-auto flex max-w-[1200px] items-center gap-2">
+      <nav className="mx-auto flex max-w-300 items-center gap-2">
         {canGetProjects && (
           <Button
             asChild

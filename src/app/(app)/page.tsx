@@ -133,7 +133,7 @@ export default function LandingPage() {
               <Zap className="h-8 w-8 text-blue-600 transition-transform group-hover:scale-110 duration-300" />
               <div className="absolute -inset-1 bg-blue-600/20 rounded-full blur opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
             </div>
-            <span className="text-xl font-bold bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">
+            <span className="text-xl font-bold bg-linear-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">
               FlowPro
             </span>
           </div>
@@ -159,7 +159,7 @@ export default function LandingPage() {
             >
               Entrar
             </Button>
-            <Button className="bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 shadow-lg hover:shadow-xl transition-all duration-300">
+            <Button className="bg-linear-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 shadow-lg hover:shadow-xl transition-all duration-300">
               Começar Grátis
             </Button>
 
@@ -199,26 +199,26 @@ export default function LandingPage() {
       {/* Hero Section */}
       <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
         {/* Background Effects */}
-        <div className="absolute inset-0 bg-gradient-to-br from-blue-50 via-indigo-50 to-purple-50 dark:from-blue-950/20 dark:via-indigo-950/20 dark:to-purple-950/20" />
+        <div className="absolute inset-0 bg-linear-to-br from-blue-50 via-indigo-50 to-purple-50 dark:from-blue-950/20 dark:via-indigo-950/20 dark:to-purple-950/20" />
         <div className="absolute inset-0 bg-grid-pattern opacity-5" />
 
         {/* Floating Elements */}
-        <div className="absolute top-20 left-10 w-20 h-20 bg-gradient-to-r from-blue-400 to-purple-400 rounded-full blur-xl opacity-20 animate-pulse" />
-        <div className="absolute bottom-20 right-10 w-32 h-32 bg-gradient-to-r from-purple-400 to-pink-400 rounded-full blur-xl opacity-20 animate-pulse animation-delay-2000" />
-        <div className="absolute top-1/2 right-20 w-16 h-16 bg-gradient-to-r from-green-400 to-blue-400 rounded-full blur-xl opacity-20 animate-pulse animation-delay-4000" />
+        <div className="absolute top-20 left-10 w-20 h-20 bg-linear-to-r from-blue-400 to-purple-400 rounded-full blur-xl opacity-20 animate-pulse" />
+        <div className="absolute bottom-20 right-10 w-32 h-32 bg-linear-to-r from-purple-400 to-pink-400 rounded-full blur-xl opacity-20 animate-pulse animation-delay-2000" />
+        <div className="absolute top-1/2 right-20 w-16 h-16 bg-linear-to-r from-green-400 to-blue-400 rounded-full blur-xl opacity-20 animate-pulse animation-delay-4000" />
 
         <div className="container mx-auto px-4 text-center relative z-10 pt-20">
-          <Badge className="mb-6 bg-gradient-to-r from-blue-100 to-purple-100 text-blue-700 border-blue-200 hover:from-blue-200 hover:to-purple-200 transition-all duration-300 animate-fade-in">
+          <Badge className="mb-6 bg-linear-to-r from-blue-100 to-purple-100 text-blue-700 border-blue-200 hover:from-blue-200 hover:to-purple-200 transition-all duration-300 animate-fade-in">
             <Sparkles className="w-3 h-3 mr-1" />
             Novo: Automação com IA Generativa
           </Badge>
 
           <h1 className="text-5xl md:text-7xl font-bold mb-6 animate-fade-in-up">
-            <span className="bg-gradient-to-r from-gray-900 via-blue-800 to-purple-800 dark:from-white dark:via-blue-300 dark:to-purple-300 bg-clip-text text-transparent">
+            <span className="bg-linear-to-r from-gray-900 via-blue-800 to-purple-800 dark:from-white dark:via-blue-300 dark:to-purple-300 bg-clip-text text-transparent">
               Automatize seu fluxo
             </span>
             <br />
-            <span className="bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">
+            <span className="bg-linear-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">
               e multiplique resultados
             </span>
           </h1>
@@ -233,7 +233,7 @@ export default function LandingPage() {
           <div className="grid grid-cols-2 md:grid-cols-4 gap-8 mb-10 animate-fade-in-up animation-delay-400">
             {stats.map((stat) => (
               <div key={stat.number} className="text-center">
-                <div className="text-3xl md:text-4xl font-bold bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent mb-1">
+                <div className="text-3xl md:text-4xl font-bold bg-linear-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent mb-1">
                   {stat.number}
                 </div>
                 <div className="text-sm text-muted-foreground">
@@ -246,7 +246,7 @@ export default function LandingPage() {
           <div className="flex flex-col sm:flex-row gap-4 justify-center animate-fade-in-up animation-delay-600">
             <Button
               size="lg"
-              className="bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 shadow-lg hover:shadow-xl transform hover:scale-105 transition-all duration-300"
+              className="bg-linear-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 shadow-lg hover:shadow-xl transform hover:scale-105 transition-all duration-300"
             >
               <Sparkles className="mr-2 h-5 w-5" />
               Começar Gratuitamente
@@ -277,7 +277,7 @@ export default function LandingPage() {
             </Badge>
             <h2 className="text-4xl md:text-5xl font-bold text-foreground mb-6">
               Recursos que
-              <span className="bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">
+              <span className="bg-linear-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">
                 {" "}
                 transformam{" "}
               </span>
@@ -299,7 +299,7 @@ export default function LandingPage() {
                 >
                   <CardHeader className="pb-4">
                     <div
-                      className={`w-16 h-16 bg-gradient-to-r ${feature.color} rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300 shadow-lg`}
+                      className={`w-16 h-16 bg-linear-to-r ${feature.color} rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300 shadow-lg`}
                     >
                       <Icon className="h-8 w-8 text-white" />
                     </div>
@@ -316,7 +316,7 @@ export default function LandingPage() {
           </div>
 
           {/* Additional Benefits */}
-          <div className="mt-16 bg-gradient-to-r from-blue-50 to-purple-50 dark:from-blue-950/20 dark:to-purple-950/20 rounded-3xl p-8 md:p-12">
+          <div className="mt-16 bg-linear-to-r from-blue-50 to-purple-50 dark:from-blue-950/20 dark:to-purple-950/20 rounded-3xl p-8 md:p-12">
             <div className="text-center mb-10">
               <h3 className="text-2xl md:text-3xl font-bold mb-4">
                 Por que escolher FlowPro?
@@ -350,7 +350,7 @@ export default function LandingPage() {
       </section>
 
       {/* Testimonials Section */}
-      <section className="py-24 bg-gradient-to-br from-gray-50 to-blue-50 dark:from-gray-900 dark:to-blue-950/20">
+      <section className="py-24 bg-linear-to-br from-gray-50 to-blue-50 dark:from-gray-900 dark:to-blue-950/20">
         <div className="container mx-auto px-4">
           <div className="text-center mb-16">
             <Badge className="mb-4 bg-green-50 text-green-700 border-green-200">
@@ -358,7 +358,7 @@ export default function LandingPage() {
             </Badge>
             <h2 className="text-4xl md:text-5xl font-bold text-foreground mb-6">
               O que nossos
-              <span className="bg-gradient-to-r from-green-600 to-blue-600 bg-clip-text text-transparent">
+              <span className="bg-linear-to-r from-green-600 to-blue-600 bg-clip-text text-transparent">
                 {" "}
                 clientes{" "}
               </span>
@@ -401,7 +401,7 @@ export default function LandingPage() {
                     "{testimonial.content}"
                   </p>
                   <div className="flex items-center">
-                    <div className="w-12 h-12 bg-gradient-to-r from-blue-600 to-purple-600 rounded-full flex items-center justify-center text-white font-bold mr-4 shadow-lg">
+                    <div className="w-12 h-12 bg-linear-to-r from-blue-600 to-purple-600 rounded-full flex items-center justify-center text-white font-bold mr-4 shadow-lg">
                       {testimonial.initials}
                     </div>
                     <div>
@@ -421,7 +421,7 @@ export default function LandingPage() {
       </section>
 
       {/* CTA Section */}
-      <section className="py-24 bg-gradient-to-r from-blue-600 via-purple-600 to-indigo-700 text-white relative overflow-hidden">
+      <section className="py-24 bg-linear-to-r from-blue-600 via-purple-600 to-indigo-700 text-white relative overflow-hidden">
         <div className="absolute inset-0 bg-black/10" />
         <div className="absolute top-0 left-0 w-full h-full opacity-10">
           <div className="absolute top-20 left-20 w-32 h-32 bg-white rounded-full blur-3xl" />
