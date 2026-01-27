@@ -1,3 +1,10 @@
+# [1.2.0](https://github.com/FelipeFardo/Next-SaaS/compare/v1.1.0...v1.2.0) (2026-01-27)
+
+
+### Features
+
+* update libs ([56448e3](https://github.com/FelipeFardo/Next-SaaS/commit/56448e3e46bc2eb7d514d816bdcaa17a4c400178))
+
 # [1.1.0](https://github.com/FelipeFardo/Next-SaaS/compare/v1.0.2...v1.1.0) (2025-08-30)
 
 
